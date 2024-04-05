@@ -169,7 +169,7 @@ class EarlyExitModel(nn.Module):
                 
             # if even after going through each early exit layer, there are samples that did not exit, grab the y_hat from terminal classifier
             if len(remaining_idx) > 0:
-                print(last_layer_y_hat)
+                # print(last_layer_y_hat)
                 y_hat[remaining_idx] = last_layer_y_hat
                 self.num_exits_per_module.append(len(remaining_idx))
             else:
